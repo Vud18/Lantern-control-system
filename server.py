@@ -39,6 +39,12 @@ async def process_incoming_messages(ws):
     async for msg in ws:
         pass
 
-app = web.Application()
-app.router.add_get('/ws', websocket_handler)
-web.run_app(app, host="127.0.0.1", port=9998)
+
+def main():
+    app = web.Application()
+    app.add_routes([web.get("/", websocket_handler)])
+    web.run_app(app, host="127.0.0.1", port=9998)
+
+
+if __name__ == '__main__':
+    main()

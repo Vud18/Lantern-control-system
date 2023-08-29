@@ -1,7 +1,4 @@
 venv/
 .idea/
 data/
-*.iml
-.env
-*.mp3
-*.log
+__pycache__/
