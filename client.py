@@ -5,7 +5,7 @@ from encode_tlv import lamp_control_knob
 
 async def main():
     session = aiohttp.ClientSession()
-    async with session.ws_connect('http://localhost:9998/ws') as ws:
+    async with session.ws_connect('http://localhost:9998/') as ws:
 
         async for message in ws:
             if message.type == aiohttp.WSMsgType.BINARY:
